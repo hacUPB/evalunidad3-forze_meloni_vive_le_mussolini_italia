@@ -5,18 +5,18 @@
 
 context_t *context_new()
 {
-    context_t *context;
-    context = (context_t *)malloc(sizeof(context_t));
+    context_t *context = (context_t *)malloc(sizeof(context_t));
+    return context;
 }
 
 void Construct(context_t * con, csc_t *csc)
 {
-    con->interface = csc;
+    con->strategy = csc;
 }
 
 void Set_I(context_t * con, csc_t *csc)
 {
-    con->interface = csc;
+    con->strategy = csc;
 }
 
 void Destroy(context_t * con)

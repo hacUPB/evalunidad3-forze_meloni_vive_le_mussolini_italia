@@ -7,18 +7,18 @@ typedef struct _csc{
     DoAlgorithm algorithm;
 } csc_t;
 
-csc_t *csc_new();
-
 //------------------- Instances -------------------//
 
+//Strategy A
 typedef struct _strA{
-    csc_t csA;
+    csc_t csa;
 }strA_t;
 
 strA_t*strA_new();
 
+//Strategy B
 typedef struct _strB{
-    csc_t csB;
+    csc_t csb;
 }strB_t;
 
 strB_t*strB_new();

@@ -12,5 +12,5 @@ strA_t*strA_new()
 {
     strA_t * A;
     A = (strA_t *)malloc(sizeof(strA_t));
-    A -> csA.algorithm = _AlgoA;
+    A -> csa.algorithm = _AlgoA;
 }

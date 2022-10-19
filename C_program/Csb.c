@@ -8,9 +8,9 @@ void _AlgoB(void * tag)
 
 }
 
-strB_t*strA_new()
+strB_t*strB_new()
 {
-    strB_t * A;
-    A = (strB_t *)malloc(sizeof(strB_t));
-    A -> csB.algorithm = _AlgoB;
+    strB_t * B;
+    B = (strB_t *)malloc(sizeof(strB_t));
+    B -> csb.algorithm = _AlgoB;
 }

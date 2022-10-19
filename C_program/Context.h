@@ -3,8 +3,8 @@
 #include "Interface.h"
 
 typedef struct{
-    csc_t *interface;
-    char *tag;
+    csc_t *strategy;
+    char *data;
 }context_t;
 
 context_t *context_new();
