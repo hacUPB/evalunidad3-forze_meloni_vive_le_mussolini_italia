@@ -3,28 +3,25 @@
 #include <string.h>
 #include "Context.h"
 
-context_t *context_new()
-{
-    context_t *context = (context_t *)malloc(sizeof(context_t));
-    return context;
+context_t *Context_New(){
+    return(context_t *)malloc(sizeof(context_t));
 }
 
-void Construct(context_t * con, csc_t *csc)
-{
-    con->strategy = csc;
+void Context_Ctor(context_t * context, void *interface){
+    context->strategy = (interface_t *)interface;
 }
 
-void Set_I(context_t * con, csc_t *csc)
-{
-    con->strategy = csc;
+void Context_Dtor(context_t * context){
+    free(context->data);
+    free(context);
 }
 
-void Destroy(context_t * con)
-{
-    free(con);
+void Context_SetI(context_t * context, void *interface){
+    context->strategy = (interface_t *)interface;
 }
 
-void Do_Stuff()
-{
-
+void Context_DoStuff(context_t * context, char arr []){
+    context->data = malloc(sizeof(context->data = arr));
+    strcpy(context->data, arr);
+    context-> strategy->algorithm(context->data);
 }

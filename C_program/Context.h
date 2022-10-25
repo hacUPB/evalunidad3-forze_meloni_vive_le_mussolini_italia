@@ -3,15 +3,16 @@
 #include "Interface.h"
 
 typedef struct{
-    csc_t *strategy;
-    char *data;
-}context_t;
+    interface_t *strategy;
+    char* data;
+} context_t;
 
-context_t *context_new();
+context_t *Context_New();
 
-void Construct(context_t *,csc_t *);
-void Set_I(context_t *,csc_t *);
-void Do_Stuff();
-void Destroy(context_t *);
+void Context_Ctor(context_t *,void *);
+void Context_Dtor(context_t *);
+
+void Context_SetI(context_t *,void *);
+void Context_DoStuff(context_t *,char arr []);
 
 #endif

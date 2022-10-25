@@ -3,25 +3,28 @@
 
 typedef void (*DoAlgorithm)(void *);
 
-typedef struct _csc{
+typedef struct{
     DoAlgorithm algorithm;
-} csc_t;
+} interface_t;
 
 //------------------- Instances -------------------//
 
 //Strategy A
-typedef struct _strA{
-    csc_t csa;
+typedef struct{
+    interface_t csa;
 }strA_t;
 
-strA_t*strA_new();
+strA_t*StrA_New();
+void StrA_Dtor(strA_t*);
+
+//---------------------   oo   --------------------//
 
 //Strategy B
-typedef struct _strB{
-    csc_t csb;
+typedef struct{
+    interface_t csb;
 }strB_t;
 
-strB_t*strB_new();
-
+strB_t*StrB_New();
+void StrB_Dtor(strB_t*);
 //---------------------   oo   --------------------//
 #endif
