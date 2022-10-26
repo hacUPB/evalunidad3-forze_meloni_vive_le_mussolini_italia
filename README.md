@@ -8,24 +8,24 @@ El programa contiene 3 estrategias para organizar una cadena de carácteres, la 
 
 Los algoritmos de B y C recorren el arreglo de carácteres mediante dos índices, "i" y "j", permitiendo comparar los valores ASCII de dos espacios del arreglo consecutivos.
 
-void _AlgoB(void * data){
-    printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");
-    char string [20];
-    strcpy(string,(char *)data);
-    char temp;
-    int i, j;
-    int n = strlen(data);
-
-    for(i = 0; i < n-1; i++){
-        for(j = i+1; j < n; j++){  
-            if (string[i] > string[j]){
-                temp = string[i];
-                string[i] = string[j];
-                string[j] = temp;
+    void _AlgoB(void * data)
+    {
+        printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");
+        char string [20];
+        strcpy(string,(char *)data);
+        char temp;
+        int i, j;
+        int n = strlen(data);
+        for(i = 0; i < n-1; i++){
+            for(j = i+1; j < n; j++){  
+                if (string[i] > string[j]){
+                    temp = string[i];
+                    string[i] = string[j];
+                    string[j] = temp;
+                }
             }
         }
+        printf("%s\n", string);
     }
-    printf("%s\n", string);
-}
 
 
