@@ -3,6 +3,9 @@
 #include <string.h>
 #include "Context.h"
 #include "Interface.h"
+#include "Csa.h"
+#include "Csb.h"
+#include "Csc.h"
 
 int main(void)
 {
@@ -27,13 +30,13 @@ int main(void)
      printf("\n");
 
     StrA_Dtor(StrategyA);
-    free(StrategyA);
+    //free(StrategyA);
     StrB_Dtor(StrategyB);
-    free(StrategyB);
+    //free(StrategyB);
     StrC_Dtor(StrategyC);
-    free(StrategyC);
+    //free(StrategyC);
     Context_Dtor(Context);
-    free(Context);
+    //free(Context);
 
     return 0;
 }

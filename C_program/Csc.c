@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Interface.h"
+#include "Csc.h"
 
 void _AlgoC(void * data){
     printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");

@@ -1,3 +1,4 @@
 #Copile files and executable
 *.o
 *.exe
+app

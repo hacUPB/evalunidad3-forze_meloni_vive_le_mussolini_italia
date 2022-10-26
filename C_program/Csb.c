@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Interface.h"
+#include "Csb.h"
 
 void _AlgoB(void * data){
     printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");
