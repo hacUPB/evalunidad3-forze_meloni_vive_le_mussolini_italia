@@ -28,4 +28,5 @@ Los algoritmos de B y C recorren el arreglo de carácteres mediante dos índices
         printf("%s\n", string);
     }
 
+![Goosolini](https://user-images.githubusercontent.com/83146834/198071163-28087d08-b0ad-42c0-89e7-c8de87596b59.jpeg)
 
