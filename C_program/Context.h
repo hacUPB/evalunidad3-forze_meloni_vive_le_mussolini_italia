@@ -13,6 +13,7 @@ void Context_Ctor(context_t *,void *);
 void Context_Dtor(context_t *);
 
 void Context_SetI(context_t *,void *);
-void Context_DoStuff(context_t *,char arr []);
+//Jesse we need to cook
+void Context_DoMeth(context_t *,char arr []);
 
 #endif

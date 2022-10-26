@@ -3,7 +3,7 @@
 #include <string.h>
 #include "Interface.h"
 
-void _AlgoB(void * data){
+void _AlgoC(void * data){
     printf("Context: Sorting data using the strategy (not sure how it'll do it)\n");
     char string [20];
     strcpy(string,(char *)data);
@@ -13,7 +13,7 @@ void _AlgoB(void * data){
 
     for(i = 0; i < n-1; i++){
         for(j = i+1; j < n; j++){
-            if (string[i] > string[j]){
+            if (string[i] < string[j]){
                 temp = string[i];
                 string[i] = string[j];
                 string[j] = temp;
@@ -23,13 +23,13 @@ void _AlgoB(void * data){
     printf("%s\n", string);
 }
 
-strB_t*StrB_New(){
-    strB_t * B;
-    B = (strB_t *)malloc(sizeof(strB_t));
-    B -> csb.algorithm = _AlgoB;
-    return B;
+strC_t*StrC_New(){
+    strC_t * C;
+    C = (strC_t *)malloc(sizeof(strC_t));
+    C -> csc.algorithm = _AlgoC;
+    return C;
 }
 
-void StrB_Dtor (strB_t * B){
-    free(B);
+void StrC_Dtor (strC_t * C){
+    free(C);
 }
